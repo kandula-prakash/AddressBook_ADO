@@ -1,0 +1,42 @@
+--Create table employee_payroll(Id int identity(1,1) Primary key,Name varchar(50),Salary decimal(12,2)Not Null,Start datetime Not Null)
+--exec sp_help employee_payroll
+--INSERT INTO employee_payroll (Name ,Salary ,Start) values
+--('Bill',10220,21/5/2015),
+--('terisa',20122,21/8/2016),
+--('charile',50464,5/6/2016);
+--select * from employee_payroll
+--select salary from employee_payroll where NAME= 'Bill'
+--select salary from employee_payroll where Name='charile'
+--Select * From employee_payroll Where start BETWEEN CAST('2018-01-01' AS DATETIME) AND GETDATE()
+--Select * From employee_payroll Where start BETWEEN CAST('2019-01-01' AS DATETIME) AND GETDATE()
+--ALTER Table employee_payroll ADD Gender varchar(1);
+--update employee_payroll set gender = 'F' where name = 'Terisa';
+--select * from employee_payroll 
+--update employee_payroll set gender = 'M' where name = 'Bill' or name = 'Charlie';
+--select * from employee_payroll
+--update employee_payroll set gender ='M'where name='charile'
+--select*from employee_payroll
+--update employee_payroll set Salary = 3000000.00 where name = 'Terisa';
+--SELECT AVG(Salary) From employee_payroll where gender =  'M' Group by gender;
+--SELECT AVG(Salary) From employee_payroll Group by gender;
+--SELECT gender, AVG(Salary) From employee_payroll Group by gender;
+
+
+
+--select * from employee_payroll
+--alter table employee_payroll add phone_number varchar(250);
+--alter table employee_payroll add address varchar(250)Not Null default 'TBD';
+--alter table employee_payroll add department varchar(150);
+--select * from employee_payroll
+--alter table employee_payroll alter address set default 'TBD';
+--update employee_payroll set address = 'TBD';
+--select * from employee_payroll
+--exec sp_help employee_payroll
+--alter table employee_payroll drop column deductions;
+--alter table employee_payroll add department varchar(250)Not Null default 'TBD';
+--sp_rename 'employee_payroll.salary' , 'basic_pay'
+--alter table employee_payroll add deductions decimal(12,2) Not null default '0';
+--alter table employee_payroll add taxable_pay decimal(12,2) Not null default '0';
+--alter table employee_payroll add tax decimal(12,2) Not null default '0';
+--alter table employee_payroll add net_pay decimal(12,2) Not null default '0';
+select * from employee_payroll
